@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.StreamCorruptedException;
 import java.util.*;
 
+///// NOTE: SOLUTION REQUIERS OPTIMIZATION AND PURIFICATION
 public class Day3_part2 {
 
     private static class VerticLine {
@@ -79,12 +80,12 @@ public class Day3_part2 {
             }
         }
 
-
+        //////////////////////////////////////////////////////////////////////////////////////////
         ///// CHECKING - in every step of second wire - IF SECOND WIRE CROSSED THE FIRST ONE /////
         int odlMin = 1000000;
         int lastx2 = 0, lasty2 = 0;
         int totalStepsW2 = 0;
-        Map<Integer, String> map = new HashMap<>(); // key -> ilość kroków kabla 2 = tSK2; value -> współrzędne
+        Map<Integer, String> map = new HashMap<>(); // key -> numb of steps = tSW2; value -> co-ordinates
 
         int size4 = dirlw2.size();
         for (int i = 0; i < size4; i++) {
@@ -275,9 +276,8 @@ public class Day3_part2 {
         Map<Integer, String> map2 = new HashMap<>();
         map2 = findIntersection(useOfdirlw2, useOfdirlw1, useOfvallw2, useOfvallw1);
 
-
+        /// OUTPUT MAPS ANALYSIS ///
         List<Integer> stepSumList = new ArrayList<>();
-
 
         for (Map.Entry<Integer, String> entry : map1.entrySet()) {
             Integer key = entry.getKey();
