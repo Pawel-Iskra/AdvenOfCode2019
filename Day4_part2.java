@@ -1,34 +1,29 @@
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
 public class Day4_part2 {
     public static void main(String[] args) {
 
-        int st = 235741;
+        int start = 235741;
         int end = 706948;
-        int rand;
 
-        Random random = new Random();
         Set<Integer> setRand = new HashSet<>();
 
-
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = start; i <= end; i++) {
 
             boolean flag1 = false, flag2 = false;
 
-            rand = random.nextInt((end - st) + 1) + st;
-            char[] lc = String.valueOf(rand).toCharArray();
+            char[] lc = String.valueOf(i).toCharArray();
 
             if (((lc[0] == lc[1]) && lc[2] != lc[1])
                     || ((lc[1] == lc[2]) && lc[0] != lc[1] && lc[3] != lc[1])
                     || ((lc[2] == lc[3]) && lc[1] != lc[2] && lc[4] != lc[2])
                     || ((lc[3] == lc[4]) && lc[2] != lc[3] && lc[5] != lc[3])
                     || ((lc[4] == lc[5]) && lc[3] != lc[4])) flag1 = true;
-            
+
             if (lc[0] <= lc[1] && lc[1] <= lc[2] && lc[2] <= lc[3] && lc[3] <= lc[4] && lc[4] <= lc[5]) flag2 = true;
 
-            if (flag1 && flag2) setRand.add(rand);
+            if (flag1 && flag2) setRand.add(i);
         }
 
         System.out.println("Answer = " + setRand.size());
