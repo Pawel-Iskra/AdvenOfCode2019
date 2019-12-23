@@ -16,23 +16,21 @@ public class Day12_part2 {
         int startPosY;
         int startPosZ;
 
-        public Moon(int lastX, int lastY, int lastZ,
-                    int newX, int newY, int newZ,
-                    int velX, int velY, int velZ,
-                    int startPosX, int startPosY, int startPosZ) {
+        public Moon(int valueX, int valueY, int valueZ,
+                    int velX, int velY, int velZ) {
 
-            this.lastX = lastX;
-            this.lastY = lastY;
-            this.lastZ = lastZ;
-            this.newX = newX;
-            this.newY = newY;
-            this.newZ = newZ;
+            this.lastX = valueX;
+            this.lastY = valueY;
+            this.lastZ = valueZ;
+            this.newX = valueX;
+            this.newY = valueY;
+            this.newZ = valueZ;
             this.velX = velX;
             this.velY = velY;
             this.velZ = velZ;
-            this.startPosX = startPosX;
-            this.startPosY = startPosY;
-            this.startPosZ = startPosZ;
+            this.startPosX = valueX;
+            this.startPosY = valueY;
+            this.startPosZ = valueZ;
         }
     }
 
@@ -171,25 +169,22 @@ public class Day12_part2 {
         int startX_1 = -7, startX_2 = -12, startX_3 = 6, startX_4 = 4;
         int startY_1 = -8, startY_2 = -3, startY_3 = -17, startY_4 = -10;
         int startZ_1 = 9, startZ_2 = -4, startZ_3 = -9, startZ_4 = -6;
+        int startVel = 0;
 
         char[] coordinates = {'x', 'y', 'z'};
         int[] periods = new int[3];
 
         for (int i = 0; i < 3; i++) {
 
-            Moon Io = new Moon(startX_1, startY_1, startZ_1, startX_1, startY_1, startZ_1,
-                    0, 0, 0, startX_1, startY_1, startZ_1);
-            Moon Europ = new Moon(startX_2, startY_2, startZ_2, startX_2, startY_2, startZ_2,
-                    0, 0, 0, startX_2, startY_2, startZ_2);
-            Moon Gany = new Moon(startX_3, startY_3, startZ_3, startX_3, startY_3, startZ_3,
-                    0, 0, 0, startX_3, startY_3, startZ_3);
-            Moon Calli = new Moon(startX_4, startY_4, startZ_4, startX_4, startY_4, startZ_4,
-                    0, 0, 0, startX_4, startY_4, startZ_4);
+            Moon Io = new Moon(startX_1, startY_1, startZ_1, startVel, startVel, startVel);
+            Moon Europ = new Moon(startX_2, startY_2, startZ_2,startVel, startVel, startVel);
+            Moon Gany = new Moon(startX_3, startY_3, startZ_3, startVel, startVel, startVel);
+            Moon Calli = new Moon(startX_4, startY_4, startZ_4, startVel, startVel, startVel);
 
             periods[i] = findPeriod(Io, Europ, Gany, Calli, coordinates[i]);
         }
 
-        long commonPeriod = getLeastCommonMultiple(getLeastCommonMultiple(periods[0],periods[1]), periods[2]);
+        long commonPeriod = getLeastCommonMultiple(getLeastCommonMultiple(periods[0], periods[1]), periods[2]);
 
         System.out.println("Answer = " + commonPeriod);
 
