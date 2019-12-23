@@ -1,9 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class Day2_part2 {
     public static void main(String[] args) throws IOException {
@@ -12,42 +9,46 @@ public class Day2_part2 {
 
         String[] input = br.readLine().split(",");
         int size = input.length;
+        boolean flag = false;
 
 
-        while (true) {
+        for (int noun = 0; noun < 100; noun++) {
 
-            List<Integer> in = new ArrayList<>();
-            for (int i = 0; i < size; i++)
-                in.add(Integer.parseInt(input[i]));
+            if (flag) break;
+
+            for (int verb = 0; verb < 100; verb++) {
 
 
-            Random rand = new Random();
-            int noun = rand.nextInt(100);
-            int verb = rand.nextInt(100);
+                int[] in = new int[size];
+                for (int i = 0; i < size; i++)
+                    in[i] = (Integer.parseInt(input[i]));
 
-            in.set(1, noun);
-            in.set(2, verb);
 
-            int i = 0;
-            while (in.get(i) != 99) {
+                in[1] = noun;
+                in[2] = verb;
 
-                switch (in.get(i)) {
+                int i = 0;
+                while (in[i] != 99) {
 
-                    case 1:
-                        in.set(in.get(i + 3), in.get(in.get(i + 1)) + in.get(in.get(i + 2)));
-                        break;
-                    case 2:
-                        in.set(in.get(i + 3), in.get(in.get(i + 1)) * in.get(in.get(i + 2)));
-                        break;
+                    switch (in[i]) {
+
+                        case 1:
+                            in[in[i + 3]] = in[in[i + 1]] + in[in[i + 2]];
+                            break;
+                        case 2:
+                            in[in[i + 3]] = in[in[i + 1]] * in[in[i + 2]];
+                            break;
+                    }
+                    i = i + 4;
                 }
-                i = i + 4;
-            }
 
-            if (in.get(0) == 19690720) {
-                System.out.println("Answer = " + (100 * noun + verb));
-                break;
-            }
+                if (in[0] == 19690720) {
+                    System.out.println("Answer = " + (100 * noun + verb));
+                    flag = true;
+                    break;
+                }
 
+            }
         }
 
 
