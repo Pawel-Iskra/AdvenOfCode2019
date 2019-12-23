@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Day12_part1 {
 
     static class Moon {
@@ -14,16 +12,15 @@ public class Day12_part1 {
         int velY;
         int velZ;
 
-        public Moon(int lastX, int lastY, int lastZ,
-                    int newX, int newY, int newZ,
+        public Moon(int valueX, int valueY, int valueZ,
                     int velX, int velY, int velZ) {
 
-            this.lastX = lastX;
-            this.lastY = lastY;
-            this.lastZ = lastZ;
-            this.newX = newX;
-            this.newY = newY;
-            this.newZ = newZ;
+            this.lastX = valueX;
+            this.lastY = valueY;
+            this.lastZ = valueZ;
+            this.newX = valueX;
+            this.newY = valueY;
+            this.newZ = valueZ;
             this.velX = velX;
             this.velY = velY;
             this.velZ = velZ;
@@ -100,12 +97,12 @@ public class Day12_part1 {
         int startX_1 = -7, startX_2 = -12, startX_3 = 6, startX_4 = 4;
         int startY_1 = -8, startY_2 = -3, startY_3 = -17, startY_4 = -10;
         int startZ_1 = 9, startZ_2 = -4, startZ_3 = -9, startZ_4 = -6;
+        int startVel = 0;
 
-
-        Moon Io = new Moon(startX_1, startY_1, startZ_1, startX_1, startY_1, startZ_1, 0, 0, 0);
-        Moon Europ = new Moon(startX_2, startY_2, startZ_2, startX_2, startY_2, startZ_2, 0, 0, 0);
-        Moon Gany = new Moon(startX_3, startY_3, startZ_3, startX_3, startY_3, startZ_3, 0, 0, 0);
-        Moon Calli = new Moon(startX_4, startY_4, startZ_4, startX_4, startY_4, startZ_4, 0, 0, 0);
+        Moon Io = new Moon(startX_1, startY_1, startZ_1, startVel, startVel, startVel);
+        Moon Europ = new Moon(startX_2, startY_2, startZ_2,startVel, startVel, startVel);
+        Moon Gany = new Moon(startX_3, startY_3, startZ_3, startVel, startVel, startVel);
+        Moon Calli = new Moon(startX_4, startY_4, startZ_4, startVel, startVel, startVel);
 
         for (int i = 1; i <= 1000; i++) {
 
