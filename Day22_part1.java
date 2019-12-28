@@ -11,7 +11,6 @@ public class Day22_part1 {
         List<Integer> temp = new ArrayList<>();
 
         if (n < 0) {
-
             n = n * (-1);
             int size = cards.size();
 
@@ -22,7 +21,6 @@ public class Day22_part1 {
             cards.addAll(temp);
 
         } else {
-
             temp.addAll(cards.subList(0, n));
             cards.removeAll(temp);
             cards.addAll(temp);
@@ -43,13 +41,13 @@ public class Day22_part1 {
 
         int j = 0;
         for (int i = 1; i < size; i++) {
-
             j = j + n;
             if (j > size) j = j - size;
             if (j < 0) j = j + size;
 
             temp.set(j, cards.get(i));
         }
+        
         cards.removeAll(cards);
         cards.addAll(temp);
     }
@@ -75,7 +73,6 @@ public class Day22_part1 {
             if (input[0].equals("cut")) dealWithCut(Integer.parseInt(input[1]), cards);
             else if (input[1].equals("into")) dealIntoNewStack(cards);
             else if (input[1].equals("with")) dealWithIncrement(Integer.parseInt(input[3]), cards);
-
         }
 
         int answer = -1;
