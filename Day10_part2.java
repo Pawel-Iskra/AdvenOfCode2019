@@ -20,16 +20,6 @@ public class Day10_part2 {
             this.realX = realX;
             this.realY = realY;
         }
-
-        @Override
-        public String toString() {
-            return "Asteroid{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    ", realX=" + realX +
-                    ", realY=" + realY +
-                    '}';
-        }
     }
 
     static class Direction {
