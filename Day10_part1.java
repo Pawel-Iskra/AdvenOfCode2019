@@ -90,11 +90,7 @@ public class Day10_part1 {
 
         int sizeX = map.get(0).length;
         int sizeY = map.size();
-        int max = 0;
-        int startX = 0;
-        int startY = 0;
-        int endX = 0;
-        int endY = 0;
+        int max = 0, startX = 0, startY = 0, endX = 0, endY = 0;
 
         switch (quarterNumb) {
             case 1:
