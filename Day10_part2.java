@@ -98,7 +98,6 @@ public class Day10_part2 {
                 }
             }
         }
-
         return asteroids;
     }
 
@@ -143,7 +142,6 @@ public class Day10_part2 {
                 }
             }
         }
-
         return directionList;
     }
 
@@ -219,9 +217,10 @@ public class Day10_part2 {
             if (fourthQuarter.get(i).asteroidList.size() == 0) fourthQuarter.remove(i);
 
         /// VAPORIZING: LOOP: (N -> Q1 -> E -> Q4 -> S -> Q3 -> W -> Q2) ///
+        boolean flag = false;
         int counter = 0;
         int numbOfVaporizedAsteroid = 200;
-        while (true) {
+        while (!flag) {
 
             // DIRECTION N //
             if (north.size() > 0) {
@@ -230,6 +229,7 @@ public class Day10_part2 {
                 counter++;
                 if (counter == numbOfVaporizedAsteroid) {
                     System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                    flag = true;
                     break;
                 }
             }
@@ -242,6 +242,7 @@ public class Day10_part2 {
                     counter++;
                     if (counter == numbOfVaporizedAsteroid) {
                         System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                        flag = true;
                         break;
                     }
                 }
@@ -254,6 +255,7 @@ public class Day10_part2 {
                 counter++;
                 if (counter == numbOfVaporizedAsteroid) {
                     System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                    flag = true;
                     break;
                 }
             }
@@ -266,6 +268,7 @@ public class Day10_part2 {
                     counter++;
                     if (counter == numbOfVaporizedAsteroid) {
                         System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                        flag = true;
                         break;
                     }
                 }
@@ -278,6 +281,7 @@ public class Day10_part2 {
                 counter++;
                 if (counter == numbOfVaporizedAsteroid) {
                     System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                    flag = true;
                     break;
                 }
             }
@@ -290,6 +294,7 @@ public class Day10_part2 {
                     counter++;
                     if (counter == numbOfVaporizedAsteroid) {
                         System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                        flag = true;
                         break;
                     }
                 }
@@ -302,6 +307,7 @@ public class Day10_part2 {
                 counter++;
                 if (counter == numbOfVaporizedAsteroid) {
                     System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                    flag = true;
                     break;
                 }
             }
@@ -314,6 +320,7 @@ public class Day10_part2 {
                     counter++;
                     if (counter == numbOfVaporizedAsteroid) {
                         System.out.println("Answer = " + (100 * temp.realX + temp.realY));
+                        flag = true;
                         break;
                     }
                 }
