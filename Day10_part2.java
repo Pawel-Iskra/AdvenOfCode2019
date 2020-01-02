@@ -183,14 +183,6 @@ public class Day10_part2 {
         return directions;
     }
 
-    static int vaporizeInStright(List<Asteroid> asteroids) {
-        int numberOfVaporizedAsteroids = 0;
-        if (asteroids.size() > 0) {
-
-        }
-
-        return numberOfVaporizedAsteroids;
-    }
 
     public static void main(String[] args) throws IOException {
 
