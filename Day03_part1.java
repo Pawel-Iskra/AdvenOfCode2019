@@ -40,7 +40,8 @@ public class Day3_part1 {
         }
     }
 
-    private static boolean checkIfIntersectionWhileHorizontalWalking(List<VerticalLines> vLines, List<HorizontalLines> hLines, int lastX, int lastY) {
+    private static boolean checkIfIntersectionWhileHorizontalWalking(List<VerticalLines> vLines,
+                                                                     List<HorizontalLines> hLines, int lastX, int lastY) {
         for (int i = 0; i < vLines.size(); i++)
             if (lastX == vLines.get(i).valueX)
                 if (lastY >= vLines.get(i).startY && lastY <= vLines.get(i).endY) return true;
@@ -52,7 +53,8 @@ public class Day3_part1 {
         return false;
     }
 
-    private static boolean checkIfIntersectionWhileVerticalWalking(List<VerticalLines> vLines, List<HorizontalLines> hLines, int lastX, int lastY) {
+    private static boolean checkIfIntersectionWhileVerticalWalking(List<VerticalLines> vLines, 
+                                                                   List<HorizontalLines> hLines, int lastX, int lastY) {
         for (int i = 0; i < hLines.size(); i++)
             if (lastY == hLines.get(i).valueY)
                 if (lastX >= hLines.get(i).startX && lastX <= hLines.get(i).endX) return true;
