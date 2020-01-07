@@ -6,214 +6,169 @@ import java.util.List;
 
 public class Day3_part1 {
 
-    private static class VerticLine {
-        int x;
-        int ymin;
-        int ymax;
+    private static class VerticalLines {
+        int valueX;
+        int startY;
+        int endY;
 
-        public VerticLine(int x, int ymin, int ymax) {
-            this.x = x;
-            this.ymin = ymin;
-            this.ymax = ymax;
+        public VerticalLines(int valueX, int startY, int endY) {
+            this.valueX = valueX;
+            this.startY = startY;
+            this.endY = endY;
         }
     }
 
-    private static class HorizLine {
-        int y;
-        int xmin;
-        int xmax;
+    private static class HorizontalLines {
+        int valueY;
+        int startX;
+        int endX;
 
-        public HorizLine(int y, int xmin, int xmax) {
-            this.y = y;
-            this.xmin = xmin;
-            this.xmax = xmax;
+        public HorizontalLines(int valueY, int startX, int endX) {
+            this.valueY = valueY;
+            this.startX = startX;
+            this.endX = endX;
         }
+    }
+
+    private static class Intersection {
+        int valueX;
+        int valueY;
+
+        public Intersection(int valueX, int valueY) {
+            this.valueX = valueX;
+            this.valueY = valueY;
+        }
+    }
+
+    private static boolean checkIfIntersectionWhileHorizontalWalking(List<VerticalLines> vLines, List<HorizontalLines> hLines, int lastX, int lastY) {
+        for (int i = 0; i < vLines.size(); i++)
+            if (lastX == vLines.get(i).valueX)
+                if (lastY >= vLines.get(i).startY && lastY <= vLines.get(i).endY) return true;
+
+        for (int i = 0; i < hLines.size(); i++)
+            if (lastX >= hLines.get(i).startX && lastX <= hLines.get(i).endX)
+                if (lastY == hLines.get(i).valueY) return true;
+
+        return false;
+    }
+
+    private static boolean checkIfIntersectionWhileVerticalWalking(List<VerticalLines> vLines, List<HorizontalLines> hLines, int lastX, int lastY) {
+        for (int i = 0; i < hLines.size(); i++)
+            if (lastY == hLines.get(i).valueY)
+                if (lastX >= hLines.get(i).startX && lastX <= hLines.get(i).endX) return true;
+
+        for (int i = 0; i < vLines.size(); i++)
+            if (lastY >= vLines.get(i).startY && lastY <= vLines.get(i).endY)
+                if (lastX == vLines.get(i).valueX) return true;
+
+        return false;
+    }
+
+    private static VerticalLines getVerticalLine(char direction, int lastY, int valueX, int steps) {
+        int lineStart = lastY;
+        int lineEnd = lastY;
+        if (direction == 'D') lastY = lastY - steps;
+        if (direction == 'U') lastY = lastY + steps;
+        if (lastY > lineEnd) lineEnd = lastY;
+        else lineStart = lastY;
+        return new VerticalLines(valueX, lineStart, lineEnd);
+    }
+
+    private static HorizontalLines getHorizontalLine(char direction, int valueY, int lastX, int steps) {
+        int lineStart = lastX;
+        int lineEnd = lastX;
+        if (direction == 'L') lastX = lastX - steps;
+        if (direction == 'R') lastX = lastX + steps;
+        if (lastX > lineEnd) lineEnd = lastX;
+        else lineStart = lastX;
+        return new HorizontalLines(valueY, lineStart, lineEnd);
     }
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
-        List<Character> dirlw1 = new ArrayList<>();       // direction list wire 1
-        List<Integer> vallw1 = new ArrayList<>();         // value list wire 1
-        List<VerticLine> verLines = new ArrayList<>();   // list of vertical lines made by first wire
-        List<HorizLine> horlines = new ArrayList<>();    // list of horizontal lines made by first wire
-
-        String[] input1 = br.readLine().split(",");
-        int size1 = input1.length;
+        List<Character> firstWireDirections = new ArrayList<>();            // direction list wire 1
+        List<Integer> firstWireSteps = new ArrayList<>();                   // number of steps for each direction - wire 1
+        String[] firstWirePath = br.readLine().split(",");
+        int size1 = firstWirePath.length;
         for (int i = 0; i < size1; i++) {
-            dirlw1.add(input1[i].charAt(0));
-            vallw1.add(Integer.parseInt(input1[i].substring(1)));
+            firstWireDirections.add(firstWirePath[i].charAt(0));
+            firstWireSteps.add(Integer.parseInt(firstWirePath[i].substring(1)));
         }
 
-
-        List<Character> dirlw2 = new ArrayList<>();       // direction list wire 2
-        List<Integer> vallw2 = new ArrayList<>();         // value list wire 2
-
-        String[] input2 = br.readLine().split(",");
-        int size2 = input2.length;
+        List<Character> secondWireDirections = new ArrayList<>();        // direction list wire 2
+        List<Integer> secondWireSteps = new ArrayList<>();               // number of steps for each direction - wire 2
+        String[] secondWirePath = br.readLine().split(",");
+        int size2 = secondWirePath.length;
         for (int i = 0; i < size2; i++) {
-            dirlw2.add(input2[i].charAt(0));
-            vallw2.add(Integer.parseInt(input2[i].substring(1)));
+            secondWireDirections.add(secondWirePath[i].charAt(0));
+            secondWireSteps.add(Integer.parseInt(secondWirePath[i].substring(1)));
         }
 
-
-        ///////////////////////////////////////////////////////
-        ///// MAKING THE "BROKEN LINE" MADE BY FIRST WIRE /////
-        int lasty = 0, lastx = 0;
-        int max, min;
-        int size3 = dirlw1.size();
-
-        for (int i = 0; i < size3; i++) {
-
-            switch (dirlw1.get(i)) {
-
+        ///// MAKING THE "BROKEN LINE" MADE BY FIRST WIRE AS LIST OF HORIZONTAL LINES AND LIST OF VERTICAL LINES/////
+        List<VerticalLines> firstWireVerticalLines = new ArrayList<>();      // list of vertical "lines" made by first wire
+        List<HorizontalLines> firstWireHorizontalLines = new ArrayList<>();  // list of horizontal "lines" made by first wire
+        int firstWireLastY = 0, firstWireLastX = 0;
+        int firstWireDirectionsSize = firstWireDirections.size();
+        for (int i = 0; i < firstWireDirectionsSize; i++) {
+            char direction = firstWireDirections.get(i);
+            int stepsMadeWire1 = firstWireSteps.get(i);
+            switch (direction) {
                 case 'D':
                 case 'U':
-                    max = lasty;
-                    min = lasty;
-
-                    if (dirlw1.get(i) == 'D') lasty = lasty - vallw1.get(i);
-                    else lasty = lasty + vallw1.get(i);
-
-                    if (lasty > max) max = lasty;
-                    else min = lasty;
-
-                    VerticLine verticalLine = new VerticLine(lastx, min, max);
-                    verLines.add(verticalLine);
+                    firstWireVerticalLines.add(getVerticalLine(direction, firstWireLastY, firstWireLastX, stepsMadeWire1));
+                    if (direction == 'D') firstWireLastY = firstWireLastY - stepsMadeWire1;
+                    if (direction == 'U') firstWireLastY = firstWireLastY + stepsMadeWire1;
                     break;
-
                 case 'L':
                 case 'R':
-                    max = lastx;
-                    min = lastx;
-
-                    if (dirlw1.get(i) == 'L') lastx = lastx - vallw1.get(i);
-                    else lastx = lastx + vallw1.get(i);
-
-                    if (lastx > max) max = lastx;
-                    else min = lastx;
-
-                    HorizLine horizontalline = new HorizLine(lasty, min, max);
-                    horlines.add(horizontalline);
+                    firstWireHorizontalLines.add(getHorizontalLine(direction, firstWireLastY, firstWireLastX, stepsMadeWire1));
+                    if (direction == 'L') firstWireLastX = firstWireLastX - stepsMadeWire1;
+                    if (direction == 'R') firstWireLastX = firstWireLastX + stepsMadeWire1;
                     break;
             }
         }
 
-
         ///// CHECKING - in every step of second wire - IF SECOND WIRE CROSSED THE FIRST ONE /////
-        int odlMin = 1000000;
-        int lastx2 = 0, lasty2 = 0;
-        int size4 = dirlw2.size();
-        for (int i = 0; i < size4; i++) {
+        List<Intersection> intersections = new ArrayList<>();
+        int secondWireLastX = 0, secondWireLastY = 0;
+        int secondWireDirectionsSize = secondWireDirections.size();
+        for (int i = 0; i < secondWireDirectionsSize; i++) {
+            int stepsMadeWire2 = secondWireSteps.get(i);
+            int stepsCounter = 0;
+            char direction = secondWireDirections.get(i);
+            switch (direction) {
+                case 'R':
+                case 'L':
+                    while (stepsCounter < stepsMadeWire2) {
+                        if (direction == 'R') secondWireLastX++;
+                        if (direction == 'L') secondWireLastX--;
+                        if (checkIfIntersectionWhileHorizontalWalking(firstWireVerticalLines, firstWireHorizontalLines, secondWireLastX, secondWireLastY))
+                            intersections.add(new Intersection(secondWireLastX, secondWireLastY));
+                        stepsCounter++;
+                    }
+                    break;
+                case 'U':
+                case 'D':
+                    while (stepsCounter < stepsMadeWire2) {
+                        if (direction == 'U') secondWireLastY++;
+                        if (direction == 'D') secondWireLastY--;
+                        if (checkIfIntersectionWhileVerticalWalking(firstWireVerticalLines, firstWireHorizontalLines, secondWireLastX, secondWireLastY))
+                            intersections.add(new Intersection(secondWireLastX, secondWireLastY));
+                        stepsCounter++;
+                    }
+                    break;
+            } // end switch
+        } // end for
 
-            char c = dirlw2.get(i);
-            int w = vallw2.get(i);
-            int temp = 0;
-            int tempx2 = 0, tempy2 = 0;
-
-            if (c == 'R') {
-
-                while (temp < w) {
-                    lastx2++;
-                    temp++;
-
-                    for (int j = 0; j < verLines.size(); j++)
-                        if (lastx2 == verLines.get(j).x)
-                            if (lasty2 <= verLines.get(j).ymax && lasty2 >= verLines.get(j).ymin) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-
-                    for (int k = 0; k < horlines.size(); k++)
-                        if (lastx2 >= horlines.get(k).xmin && lastx2 <= horlines.get(k).xmax)
-                            if (lasty2 == horlines.get(k).y) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-                }
-            } ///// END if c==R
-
-
-            if (c == 'L') {
-                while (temp > (w * (-1))) {
-                    lastx2--;
-                    temp--;
-
-                    for (int j = 0; j < verLines.size(); j++)
-                        if (lastx2 == verLines.get(j).x)
-                            if (lasty2 <= verLines.get(j).ymax && lasty2 >= verLines.get(j).ymin) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-
-                    for (int k = 0; k < horlines.size(); k++)
-                        if (lastx2 >= horlines.get(k).xmin && lastx2 <= horlines.get(k).xmax)
-                            if (lasty2 == horlines.get(k).y) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-                }
-            } ///// END if c==L
-
-
-            if (c == 'U') {
-                while (temp < w) {
-                    lasty2++;
-                    temp++;
-
-                    for (int j = 0; j < horlines.size(); j++)
-                        if (lasty2 == horlines.get(j).y)
-                            if (lastx2 <= horlines.get(j).xmax && lastx2 >= horlines.get(j).xmin) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-
-                    for (int k = 0; k < verLines.size(); k++)
-                        if (lasty2 >= verLines.get(k).ymin && lasty2 <= verLines.get(k).ymax)
-                            if (lastx2 == verLines.get(k).x) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-                }
-            } ///// END if c==U
-
-
-            if (c == 'D') {
-
-                while (temp > (w * (-1))) {
-                    lasty2--;
-                    temp--;
-
-                    for (int j = 0; j < horlines.size(); j++)
-                        if (lasty2 == horlines.get(j).y)
-                            if (lastx2 <= horlines.get(j).xmax && lastx2 >= horlines.get(j).xmin) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-
-                    for (int k = 0; k < verLines.size(); k++)
-                        if (lasty2 >= verLines.get(k).ymin && lasty2 <= verLines.get(k).ymax)
-                            if (lastx2 == verLines.get(k).x) {
-                                tempx2 = Math.abs(lastx2);
-                                tempy2 = Math.abs(lasty2);
-                                if (((tempx2 + tempy2) > 0) && ((tempx2 + tempy2) < odlMin)) odlMin = tempx2 + tempy2;
-                            }
-                }
-            } ///// END if c==D
-
+        int distanceToClosestIntersection = Integer.MAX_VALUE;
+        int intersectionsSize = intersections.size();
+        for (int i = 0; i < intersectionsSize; i++) {
+            int tempX = Math.abs(intersections.get(i).valueX);
+            int tempY = Math.abs(intersections.get(i).valueY);
+            if ((tempX + tempY) < distanceToClosestIntersection) distanceToClosestIntersection = tempX + tempY;
         }
 
-
-        System.out.println("Answer = " + odlMin);
-
+        System.out.println("Answer = " + distanceToClosestIntersection);
     }
 }
