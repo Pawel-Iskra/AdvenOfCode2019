@@ -1,5 +1,5 @@
 # AdventOfCode2019
 https://adventofcode.com/2019
 <br>My Solutions for puzzles
-<br>Moja zdobycz punktowa w rankingu punktowym z fotum 4programmers.net
-<br><img src=https://imgur.com/a/qBFwycI alt="leaderboard_4programmers.net">
+<br>Moja zdobycz punktowa w rankingu punktowym z forum 4programmers.net
+<br><a href="https://imgur.com/a/qBFwycI">leaderboard_4programmers.net</a>
