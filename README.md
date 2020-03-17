@@ -5,7 +5,7 @@ My final position in leaderboard from forum 4programmers.net:
 <br>
 <table>
    <tr align="center" vlign="middle">
-      <td>Day number
+      <td>Day task
         <br>(AdventOfCode link)</td>
       <td><B>My solutions</td> 
          
