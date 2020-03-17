@@ -164,9 +164,53 @@ My final position in leaderboard from forum 4programmers.net:
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day16_part1.java">
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
-         width=20" height="20"></a>
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         width=15" height="15">
+         </a>
       </td> 
    </tr>
-   
+    <tr align="center" vlign="middle">
+      <td><a href="https://adventofcode.com/2019/day/17">Day17</a></td>
+      <td>
+         Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day17_part1.java">
+         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         width=20" height="20"></a><br>
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         width=15" height="15">
+         </a>
+      </td> 
+   </tr>
+    <tr align="center" vlign="middle">
+      <td><a href="https://adventofcode.com/2019/day/19">Day19</a></td>
+      <td>
+         Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day19_part1.java">
+         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         width=20" height="20"></a><br>
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         width=15" height="15">
+         </a>
+      </td> 
+   </tr>
+    <tr align="center" vlign="middle">
+      <td><a href="https://adventofcode.com/2019/day/22">Day22</a></td>
+      <td>
+         Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day22_part1.java">
+         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         width=20" height="20"></a><br>
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         width=15" height="15">
+         </a>
+      </td> 
+   </tr>
+    <tr align="center" vlign="middle">
+      <td><a href="https://adventofcode.com/2019/day/24">Day24</a></td>
+      <td>
+         Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day24_part1.java">
+         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         width=20" height="20"></a><br>
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         width=15" height="15">
+         </a>
+      </td> 
+   </tr>
    </table>
