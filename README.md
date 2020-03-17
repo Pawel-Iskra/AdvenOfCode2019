@@ -1,5 +1,6 @@
 My final position in leaderboard from forum 4programmers.net:
 <br><a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/4programmers.net_leaderboard.jpg">leaderboard</a>
+
 <br>
 <br>
 <table>
@@ -165,7 +166,7 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
-         width=15" height="15">
+         width=18" height="18">
          </a>
       </td> 
    </tr>
@@ -176,7 +177,7 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
-         width=15" height="15">
+         width=18 height="18">
          </a>
       </td> 
    </tr>
@@ -187,7 +188,7 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
-         width=15" height="15">
+         width=18" height="18">
          </a>
       </td> 
    </tr>
@@ -198,7 +199,7 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
-         width=15" height="15">
+         width=18" height="18">
          </a>
       </td> 
    </tr>
@@ -209,7 +210,7 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
-         width=15" height="15">
+         width=18" height="18">
          </a>
       </td> 
    </tr>
