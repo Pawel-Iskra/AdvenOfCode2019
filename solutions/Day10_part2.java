@@ -39,7 +39,6 @@ public class Day10_part2 {
     static List<Asteroid> getSortedAsteroidsForStraight(List<char[]> map, char dir, int posX, int posY) {
         List<Asteroid> asteroids = new ArrayList<>();
         char anAsteroid = '#';
-
         switch (dir) {
             case 'N':
                 for (int i = posY - 1; i >= 0; i--)
@@ -64,17 +63,12 @@ public class Day10_part2 {
     static List<Asteroid> getSortedAsteroidsForDirection(List<char[]> map, int dirX, int dirY, int posX, int posY, int startX, int endX, int startY, int endY) {
         List<Asteroid> asteroids = new ArrayList<>();
         char anAsteroid = '#';
-
         int sizeX = map.get(0).length;
-
         for (int i = startX; i <= endX; i++) {       // i -> X
             for (int j = startY; j <= endY; j++) {   // j -> Y
-
                 if (map.get(j)[i] == anAsteroid) {
-
                     int virtX = Math.abs(i - posX);
                     int virtY = Math.abs(j - posY);
-
                     if (virtY == dirY && virtX == dirX) asteroids.add(new Asteroid(virtX, virtY, i, j));
                     for (int z = 2; z < sizeX; z++) {
                         if (virtX == (z * dirX) && virtY == (z * dirY)) {
@@ -84,14 +78,11 @@ public class Day10_part2 {
                 }
             }
         }
-
         /// BUBBLE SORT FOR ASTEROID LIST ///
         for (int i = 0; i < asteroids.size(); i++) {
             for (int j = 0; j < asteroids.size() - 1; j++) {
-
                 Asteroid tempFirst = asteroids.get(j);
                 Asteroid tempSecond = asteroids.get(j + 1);
-
                 if (tempFirst.x > tempSecond.x) {
                     asteroids.set(j, tempSecond);
                     asteroids.set(j + 1, tempFirst);
@@ -104,13 +95,10 @@ public class Day10_part2 {
     static List<Direction> getSortedDirectionList(List<char[]> map, int startX, int endX, int startY, int endY, int posX, int posY, int quarter) {
         List<Direction> directionList = new ArrayList<>();
         int sizeX = map.get(0).length;
-
         for (int i = startX; i <= endX; i++) {           // X
             for (int j = startY; j <= endY; j++) {       // Y
-
                 int virtX = Math.abs(i - posX);
                 int virtY = Math.abs(j - posY);
-
                 boolean flag = false;
                 for (int k = 2; k < sizeX; k++) if (virtX % k == 0 && virtY % k == 0) flag = true;
                 if (!flag) {
@@ -120,15 +108,12 @@ public class Day10_part2 {
                 }
             }
         }
-
         // BUBLE SORT FOR DIRECTIONS //
         int listSize = directionList.size();
         for (int i = 0; i < listSize; i++) {
             for (int j = 0; j < listSize - 1; j++) {
-
                 Direction first = directionList.get(j);
                 Direction second = directionList.get(j + 1);
-
                 if (quarter == 1 || quarter == 3) {
                     if (first.angle > second.angle) {
                         directionList.set(j, second);
@@ -149,7 +134,6 @@ public class Day10_part2 {
         int sizeX = map.get(0).length;
         int sizeY = map.size();
         int startX = 0, endX = 0, startY = 0, endY = 0;
-
         switch (quarter) {
             case 1:
                 startX = posX + 1;
@@ -176,26 +160,21 @@ public class Day10_part2 {
                 endY = sizeY - 1;
                 break;
         }
-
         List<Direction> directions = getSortedDirectionList(map, startX, endX, startY, endY, posX, posY, quarter);
         return directions;
     }
 
-
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int stationPositionX = 11;
         int stationPositionY = 19;
-
         List<char[]> map = new ArrayList<>();
         String input;
         while ((input = br.readLine()) != null) {
             char[] line = input.toCharArray();
             map.add(line);
         }
-
         List<Asteroid> north = getSortedAsteroidsForStraight(map, 'N', stationPositionX, stationPositionY);
         List<Asteroid> south = getSortedAsteroidsForStraight(map, 'S', stationPositionX, stationPositionY);
         List<Asteroid> west = getSortedAsteroidsForStraight(map, 'W', stationPositionX, stationPositionY);
@@ -205,7 +184,7 @@ public class Day10_part2 {
         List<Direction> secondQuarter = getSortedDirectionListForQuarter(map, stationPositionX, stationPositionY, 2);
         List<Direction> thirdQuarter = getSortedDirectionListForQuarter(map, stationPositionX, stationPositionY, 3);
         List<Direction> fourthQuarter = getSortedDirectionListForQuarter(map, stationPositionX, stationPositionY, 4);
-
+        
         /// cleaning empty directions in each Quarter ///
         for (int i = 0; i < firstQuarter.size(); i++)
             if (firstQuarter.get(i).asteroidList.size() == 0) firstQuarter.remove(i);
@@ -221,7 +200,6 @@ public class Day10_part2 {
         int counter = 0;
         int numbOfVaporizedAsteroid = 200;
         while (!flag) {
-
             // DIRECTION N //
             if (north.size() > 0) {
                 Asteroid temp = north.get(0);
@@ -233,7 +211,6 @@ public class Day10_part2 {
                     break;
                 }
             }
-
             // QUARTER I //
             for (int i = 0; i < firstQuarter.size(); i++) {
                 if (firstQuarter.get(i).asteroidList.size() > 0) {
@@ -247,7 +224,6 @@ public class Day10_part2 {
                     }
                 }
             }
-
             // DIRECTION E //
             if (east.size() > 0) {
                 Asteroid temp = east.get(0);
@@ -259,7 +235,6 @@ public class Day10_part2 {
                     break;
                 }
             }
-
             // QUARTER IV //
             for (int i = 0; i < fourthQuarter.size(); i++) {
                 if (fourthQuarter.get(i).asteroidList.size() > 0) {
@@ -273,7 +248,6 @@ public class Day10_part2 {
                     }
                 }
             }
-
             // DIRECTION S //
             if (south.size() > 0) {
                 Asteroid temp = south.get(0);
@@ -285,7 +259,6 @@ public class Day10_part2 {
                     break;
                 }
             }
-
             // QUARTER III //
             for (int i = 0; i < thirdQuarter.size(); i++) {
                 if (thirdQuarter.get(i).asteroidList.size() > 0) {
@@ -299,7 +272,6 @@ public class Day10_part2 {
                     }
                 }
             }
-
             // DIRECTION W //
             if (west.size() > 0) {
                 Asteroid temp = west.get(0);
@@ -311,7 +283,6 @@ public class Day10_part2 {
                     break;
                 }
             }
-
             // QUARTER II //
             for (int i = 0; i < secondQuarter.size(); i++) {
                 if (secondQuarter.get(i).asteroidList.size() > 0) {
@@ -325,9 +296,7 @@ public class Day10_part2 {
                     }
                 }
             }
-
         } // end while
-
 
     }
 }
