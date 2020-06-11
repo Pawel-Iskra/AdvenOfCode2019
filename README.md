@@ -134,6 +134,8 @@ My final position in leaderboard from forum 4programmers.net:
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day09_part1_part2.java">
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a>
+         <td align="center" valign="middle"><a href="https://ideone.com/n4tcH0">Part1<br>&<br>Part2</a>                                       
+   </td>
       </td> 
    </tr>
    <tr align="center" vlign="middle">
