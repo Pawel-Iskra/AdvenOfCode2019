@@ -218,6 +218,8 @@ My final position in leaderboard from forum 4programmers.net:
          width=18 height="18">
          </a>
       </td> 
+      <td align="center" valign="middle"><a href="https://ideone.com/N78Qo4">Part1</a>                                       
+   </td>
    </tr>
     <tr align="center" vlign="middle">
       <td><a href="https://adventofcode.com/2019/day/19">Day19</a></td>
