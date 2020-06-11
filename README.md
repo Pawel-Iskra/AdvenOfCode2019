@@ -6,7 +6,8 @@ My final position in leaderboard from forum 4programmers.net:
    <tr align="center" vlign="middle">
       <td><B>Day task</B>
         <br>(AdventOfCode link)</td>
-      <td><B>My solutions</td> 
+      <td><B>My solutions</td>
+      <td><B>My answers</td> 
          
    </tr>
    <tr align="center" vlign="middle">
@@ -19,6 +20,9 @@ My final position in leaderboard from forum 4programmers.net:
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a>
       </td> 
+       <td align="center" valign="middle"><a href="https://ideone.com/cHLj7h">Part1</a><br>
+                                          <a href="https://ideone.com/yACkFK">Part2</a>                                       
+   </td>
    </tr>
     <tr align="center" vlign="middle">
       <td><a href="https://adventofcode.com/2019/day/2">Day02</a></td>
