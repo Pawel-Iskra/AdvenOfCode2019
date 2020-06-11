@@ -68,16 +68,13 @@ public class Day13_part2 {
     private static long intComputer(Map<Long, Long> map) {
         List<Long> outList = new ArrayList<>();
         long out = 0, param1 = 0, param2 = 0, param3 = 0, relBase = 0, value = 0;
-
         long i = 0;
         while (map.get(i) != 99) {
-
             long instr = map.get(i);
             long opCode = instr % 10;
             long modeParam1 = (instr / 100) % 10;
             long modeParam2 = (instr / 1000) % 10;
             long modeParam3 = (instr / 10000) % 10;
-
             String oppCodee = String.valueOf(opCode);
             switch (oppCodee) {
                 case "1":
@@ -140,19 +137,16 @@ public class Day13_part2 {
         return getFinalScore(outList);
     }
 
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[] input = br.readLine().split(",");
         int length = input.length;
         input[0] = "2";  // setting Play mode
-
         Map<Long, Long> soft = new HashMap<>();
         long k = 0;
         for (int i = 0; i < length; i++, k++)
             soft.put(k, Long.parseLong(input[i]));
-
         long score = intComputer(soft);
         System.out.println("Answer = " + score);
     }
