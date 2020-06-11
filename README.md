@@ -243,7 +243,9 @@ My final position in leaderboard from forum 4programmers.net:
          Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
          width=18" height="18">
          </a>
-      </td> 
+      </td>
+      <td align="center" valign="middle"><a href="https://ideone.com/rCR2K2">Part1</a>                                       
+   </td>
    </tr>
     <tr align="center" vlign="middle">
       <td><a href="https://adventofcode.com/2019/day/24">Day24</a></td>
