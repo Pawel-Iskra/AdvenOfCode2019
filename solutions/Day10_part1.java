@@ -44,21 +44,18 @@ public class Day10_part1 {
         int counter = 0;
         char anAsteroid = '#';
         int sizeX = map.get(0).length;
-
         for (int i = 0; i < posX; i++) {
             if (map.get(posY)[i] == anAsteroid) {
                 counter++;
                 break;
             }
         }
-
         for (int i = (posX + 1); i < sizeX; i++) {
             if (map.get(posY)[i] == anAsteroid) {
                 counter++;
                 break;
             }
         }
-
         return counter;
     }
 
@@ -66,32 +63,27 @@ public class Day10_part1 {
         int counter = 0;
         char anAsteroid = '#';
         int sizeY = map.size();
-
         for (int i = 0; i < posY; i++) {
             if (map.get(i)[posX] == anAsteroid) {
                 counter++;
                 break;
             }
         }
-
         for (int i = (posY + 1); i < sizeY; i++) {
             if (map.get(i)[posX] == anAsteroid) {
                 counter++;
                 break;
             }
         }
-
         return counter;
     }
 
     private static int countAsteroidsInAQuarter(int posX, int posY, List<char[]> map, int quarterNumb) {
         char anAsteroid = '#';
         int counter = 0;
-
         int sizeX = map.get(0).length;
         int sizeY = map.size();
         int max = 0, startX = 0, startY = 0, endX = 0, endY = 0;
-
         switch (quarterNumb) {
             case 1:
                 if (posX > posY) max = posX;
@@ -126,64 +118,48 @@ public class Day10_part1 {
                 endY = posY + 1;
                 break;
         }
-
         /// creating list of all points in a quarter as "my virtual Matrix"=>  coordinate system that: posX=0 i posY=0 ///
         List<Point> points = new ArrayList<>();
         for (int i = startX; i >= endX; i--) {        // i -> X
             for (int j = startY; j >= endY; j--) {    // j -> Y
-
                 boolean isThereAnAsteroid = false;
                 if (map.get(j)[i] == anAsteroid) isThereAnAsteroid = true;
                 points.add(new Point(Math.abs(i - posX), Math.abs(j - posY), isThereAnAsteroid));
             }
         }
-
         /// creating list of all directions in a quarter as "my virtual Matrix"=>  coordinate system that: posX=0 i posY=0 ///
         List<Direction> directions = new ArrayList<>();
         for (int i = startX; i >= endX; i--) {        // i -> X
             for (int j = startY; j >= endY; j--) {    // j -> Y
-
                 boolean flag = false;
                 int virtualX = Math.abs(i - posX);    // virtual X
                 int virtualY = Math.abs(j - posY);    // virtual Y
-
                 for (int k = 2; k <= max; k++) if ((virtualX % k == 0) && (virtualY % k == 0)) flag = true;
-
                 if (!flag) directions.add(new Direction(virtualX, virtualY));
             }
         }
-
         // for each direction : 1. check if there is an point with an asteroid with the same coords
         //                      2. if not check points with multiples of coordinates
         int dirSize = directions.size();
         for (int i = 0; i < dirSize; i++) {
-
             int dirX = directions.get(i).x;
             int dirY = directions.get(i).y;
-
             boolean flag = false;
             int pointsSize = points.size();
             for (int j = 0; j < pointsSize; j++) {
-
                 if (flag) break;
                 if (points.get(j).x == dirX && points.get(j).y == dirY) {
-
                     if (points.get(j).isAsteroid) {
                         counter++;
                         break;
-
                     } else {
                         int k = 2;
                         int dirXinWhile = dirX * k;
                         int dirYinWhile = dirY * k;
-
                         while (k <= max) {
                             if (flag) break;
-
                             for (int g = 0; g < pointsSize; g++) {
-
                                 if (points.get(g).x == dirXinWhile && points.get(g).y == dirYinWhile) {
-
                                     if (points.get(g).isAsteroid) {
                                         counter++;
                                         flag = true;
@@ -199,7 +175,6 @@ public class Day10_part1 {
                 } // end if x == dirX && y == dirY
             } // end for - searching in pointsList
         } // end for - for each direction
-
         return counter;
     }
 
@@ -211,18 +186,15 @@ public class Day10_part1 {
         counter = counter + countAsteroidsInAQuarter(posX, posY, map, 2);
         counter = counter + countAsteroidsInAQuarter(posX, posY, map, 3);
         counter = counter + countAsteroidsInAQuarter(posX, posY, map, 4);
-
         return counter;
     }
 
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         List<char[]> map = new ArrayList<>();
         char anAsteroid = '#';
-
         String input;
         while ((input = br.readLine()) != null) {
             char[] line = input.toCharArray();
@@ -230,7 +202,6 @@ public class Day10_part1 {
         }
         int sizeX = map.get(0).length;
         int sizeY = map.size();
-
         /// counting detected asteroids for each position from map ///
         List<Position> positions = new ArrayList<>();
         for (int i = 0; i < sizeY; i++) {      // lines
@@ -242,7 +213,6 @@ public class Day10_part1 {
                 }
             }
         }
-
         int max = 0;
         int posistionXforStation = -1;
         int posistionYforStation = -1;
@@ -255,7 +225,6 @@ public class Day10_part1 {
                 posistionYforStation = temp.coordY;
             }
         }
-
         System.out.println("Answer = " + max);
         System.out.println("StationPosition X = " + posistionXforStation);
         System.out.println("StationPosition Y = " + posistionYforStation);
