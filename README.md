@@ -90,7 +90,10 @@ My final position in leaderboard from forum 4programmers.net:
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day06_part2.java">
          <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
          width=20" height="20"></a>
-      </td> 
+      </td>
+   <td align="center" valign="middle"><a href="https://ideone.com/Dxc0x9">Part1</a><br>
+                                          <a href="https://ideone.com/6Evhhy">Part2</a>                                       
+   </td>
    </tr>
    <tr align="center" vlign="middle">
       <td><a href="https://adventofcode.com/2019/day/7">Day07</a></td>
