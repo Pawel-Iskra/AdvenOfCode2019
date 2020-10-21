@@ -14,10 +14,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/1">Day01</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day01_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day01_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
        <td align="center" valign="middle"><a href="https://ideone.com/cHLj7h">Part1</a><br>
@@ -28,10 +28,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/2">Day02</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day02_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day02_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/jOse0L">Part1</a><br>
@@ -43,11 +43,11 @@ My final position in leaderboard from forum 4programmers.net:
       <td>
          Part 1 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day03_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day03_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/jnxf9v">Part1<br>&<br>Part2</a>                                       
@@ -57,10 +57,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/4">Day04</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day04_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day04_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td>
     <td align="center" valign="middle"><a href="https://ideone.com/i5WyTQ">Part1</a><br>
@@ -71,10 +71,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/5">Day05</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day05_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day05_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/QrYxpP">Part1</a><br>
@@ -85,10 +85,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/6">Day06</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day06_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day06_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td>
    <td align="center" valign="middle"><a href="https://ideone.com/Dxc0x9">Part1</a><br>
@@ -99,10 +99,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/7">Day07</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day07_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/tree/master/solutions/Day07_part2">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/IJ3Efq">Part1</a><br>
@@ -113,10 +113,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/8">Day08</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day08_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day08_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/ymr2A3">Part1</a><br>
@@ -128,11 +128,11 @@ My final position in leaderboard from forum 4programmers.net:
       <td>
          Part 1 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day09_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day09_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
          <td align="center" valign="middle"><a href="https://ideone.com/n4tcH0">Part1<br>&<br>Part2</a>                                       
    </td>
@@ -142,10 +142,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/10">Day10</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day10_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day10_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/M5DVPC">Part1</a><br>
@@ -157,11 +157,11 @@ My final position in leaderboard from forum 4programmers.net:
       <td>
          Part 1 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day11_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; 
          <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day11_part1_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/tJFJQm">Part1<br>&<br>Part2</a>                                       
@@ -171,10 +171,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/12">Day12</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day12_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day12_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/FRODuM">Part1</a><br>
@@ -185,10 +185,10 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/13">Day13</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day13_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
          Part 2 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day13_part2.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a>
       </td> 
    <td align="center" valign="middle"><a href="https://ideone.com/RYFmgN">Part1</a><br>
@@ -199,9 +199,9 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/16">Day16</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day16_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
          width=18" height="18">
          </a>
          <td align="center" valign="middle"><a href="https://ideone.com/Km0mwL">Part1</a>                                       
@@ -212,9 +212,9 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/17">Day17</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day17_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
          width=18 height="18">
          </a>
       </td> 
@@ -225,9 +225,9 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/19">Day19</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day19_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master//Done%20not.png"
          width=18" height="18">
          </a>
       </td>
@@ -238,9 +238,9 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/22">Day22</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day22_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
          width=18" height="18">
          </a>
       </td>
@@ -251,9 +251,9 @@ My final position in leaderboard from forum 4programmers.net:
       <td><a href="https://adventofcode.com/2019/day/24">Day24</a></td>
       <td>
          Part 1 &nbsp;&nbsp; <a href="https://github.com/Pawel-Iskra/AdvenOfCode2019/blob/master/solutions/Day24_part1.java">
-         <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done.png"
+         <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
          width=20" height="20"></a><br>
-         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/mySPOJ/blob/master/mySPOJ/Done%20not.png"
+         Part 2 &nbsp;&nbsp; <img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
          width=18" height="18">
          </a>
       </td>
